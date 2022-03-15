@@ -6,7 +6,7 @@ Universidad de Palermo - Trabajo Práctico - Arquitectura Web - 1er Cuatrimestre
 * Legajo: 0113696
 
 ## Descripción Inicial del Proyecto
-La idea es armar un sistema de Administración de Proyectos genérico para empresas de cualquier rubro.
+La idea es armar un sistema de ***Administración de Proyectos*** genérico para empresas de cualquier rubro.
 Para cumplir con la existencia de un CRUD en el front se va a poder:
 * Crear un proyecto nuevo.
 * Levantar información de proyectos existentes.
@@ -24,7 +24,7 @@ Las entidades que se van a trabajar son:
 * Tareas: cada proyecto puede tener 0 o más tareas, las cuales tienen sus estados al igual que los proyectos.
 * Usuario: cada usuario puede tener 0 o más proyectos asignados.
 
-## Tabla de Contenidos
+## Índice
 1. [Info General del Proyecto](#general-info)
 2. [Tecnologias](#technologies)
 3. [Clonar Repositorio en Local](#installation)
