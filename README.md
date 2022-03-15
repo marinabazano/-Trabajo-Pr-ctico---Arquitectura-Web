@@ -12,11 +12,13 @@ Para cumplir con la existencia de un CRUD en el front se va a poder:
 * Levantar información de proyectos existentes.
 * Actualizar un proyecto existente.
 * Eliminar un proyecto existente, enviando la información del mismo a un historial de borrado.
+
 Los estados de los proyectos pueden ser:
 * Iniciado: cuando recién es creado.
 * En proceso: se debe actualizar el mismo cuando se inicia a trabajar.
 * Finalizado: se debe actualizar el mismo cuando se termina de trabajar, cuando todas las tareas respectivas son finalizadas.
 * Eliminado: cuando se elimina un proyecto y se envía al historial también cambia su estado.
+
 Las entidades que se van a trabajar son:
 * Proyecto: entidad principal, son únicos.
 * Tareas: cada proyecto puede tener 0 o más tareas, las cuales tienen sus estados al igual que los proyectos.
