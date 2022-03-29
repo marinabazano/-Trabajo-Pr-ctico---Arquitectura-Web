@@ -25,16 +25,23 @@ Las entidades que se van a trabajar son:
 * Usuario: cada usuario puede tener 0 o más proyectos asignados.
 
 ## Índice
+
 1. [Info General del Proyecto](#general-info)
 2. [Tecnologias](#technologies)
-3. [Clonar Repositorio en Local](#installation)
-4. [FAQs](#faqs)
+3. [Documentación en Swagger de la API](#swagger)
+4. [Clonar Repositorio en Local](#installation)
+5. [FAQs](#faqs)
+
 
 ## Info General del Proyecto
 <a name="general-info"></a>
 
 ## Tecnologias
 <a name="technologies"></a>
+
+## Documentación en Swagger de la API
+<a name="swagger"></a>
+https://app.swaggerhub.com/apis/Arquitectura-Web/Administrador-Proyectos/1.0
 
 ## Clonar Repositorio en Local
 <a name="installation"></a>
