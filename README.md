@@ -46,5 +46,8 @@ https://app.swaggerhub.com/apis/Arquitectura-Web/Administrador-Proyectos/1.0
 ## Clonar Repositorio en Local
 <a name="installation"></a>
 
+Abrir la terminal del SO, ubicarse en la carpeta deseada y ejecutar el siguiente comando:
+git clone https://github.com/marinabazano/Trabajo-Practico-Arquitectura-Web.git
+
 ## FAQs
 <a name="faqs"></a>
