@@ -1,6 +1,9 @@
 {
   "dependencies": {
-    "express": "^4.17.3"
+    "async": "^3.2.3",
+    "express": "^4.17.3",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.3.0"
   },
   "name": "arquitectura-web",
   "version": "1.0.0",
