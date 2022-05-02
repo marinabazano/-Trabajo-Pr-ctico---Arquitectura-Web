@@ -4,11 +4,11 @@ var async = require("async");
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/arquitectura_web');
 
-mongoose.connection.on('error', function(err) {
+mongoose.connection.on('error', function (err) {
     console.log('Error connecting to mongo: ' + err);
 });
 
-mongoose.connection.on('open', function(err) { 
+mongoose.connection.on('open', function (err) {
     console.log('connected mongo!');
 
     // Projects
@@ -23,12 +23,12 @@ mongoose.connection.on('open', function(err) {
 
     projects.find(function (err, projects) {
         if (err) return console.error(err);
-         console.dir(projects);
-   });
+        console.dir(projects);
+    });
 
-   
-   // Tasks
-   var taskSchema = mongoose.Schema({
+
+    // Tasks
+    var taskSchema = mongoose.Schema({
         task_id: Number,
         task_name: String,
         description: String,
@@ -44,7 +44,7 @@ mongoose.connection.on('open', function(err) {
 
 
     // Employees
-   var employeeSchema = mongoose.Schema({
+    var employeeSchema = mongoose.Schema({
         employee_id: Number,
         employee_name: String,
         area: String
@@ -59,25 +59,25 @@ mongoose.connection.on('open', function(err) {
 
 
     // ProjectEmployee -- corregir
-   var projectemployeeSchema = mongoose.Schema({
+    var projectemployeeSchema = mongoose.Schema({
         project_id: Number,
         employee_id: Number
     });
 
-    var project_employee = mongoose.model('project_employee', projectemployeeSchema);
+    var projectemployee = mongoose.model('project_employee', projectemployeeSchema);
 
-    project_employee.find(function (err, project_employee) {
+    projectemployee.find(function (err, projectemployee) {
         if (err) return console.error(err);
-        console.dir(project_employee);
+        console.dir(projectemployee);
     });
 
-    
-   
-   
-   
-   
-   
-   async.parallel([], function() {
+
+
+
+
+
+
+    async.parallel([], function () {
 
         //mongoose.connection.close();
 

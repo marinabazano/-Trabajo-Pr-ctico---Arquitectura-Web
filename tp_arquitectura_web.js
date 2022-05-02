@@ -31,6 +31,15 @@ app.get('/projects', async (req, res) => {
     res.send('Acá se van a listar todos los proyectos')
 })
 
+app.post('/projects', (req, res) => {
+// add new project
+    clientsService.add(req.body);
+
+    res.status(201).send(req.body);
+    //trabajar body y guardarlo en la bbdd
+
+});
+
 app.get('/projects/:idProject', async (req, res) => {
     res.send('Acá se va a listar el proyecto con idProject')
 })
@@ -38,6 +47,15 @@ app.get('/projects/:idProject', async (req, res) => {
 app.get('/projects/:idProject/tasks', async (req, res) => {
     res.send('Acá se va a listar las tareas de un proyecto especifico')
 })
+
+app.post('/projects/:idProject/tasks', (req, res) => {
+    // add new task to project
+        clientsService.add(req.body);
+    
+        res.status(201).send(req.body);
+        //trabajar body y guardarlo en la bbdd
+    
+    });
 
 app.get('/projects/:idProject/tasks/:idTask', async (req, res) => {
     res.send('Acá se va a listar la tarea con idTask de un proyecto con idProject')
@@ -64,6 +82,15 @@ app.get('/tasks/:idTask', async (req, res) => {
 app.get('/employees', async (req, res) => {
     res.send('Acá se van a listar todos los empleados')
 })
+
+app.post('/employees', (req, res) => {
+    // add new employee
+        clientsService.add(req.body);
+    
+        res.status(201).send(req.body);
+        //trabajar body y guardarlo en la bbdd
+    
+    });
 
 app.get('/employees/:idEmployee', async (req, res) => {
     res.send('Acá se va a listar el empleado con idEmployee')
