@@ -41,6 +41,7 @@ app.post('/projects', (req, res) => {
 });
 
 app.get('/projects/:idProject', async (req, res) => {
+    console.log(req.params.idProject)
     res.send('Acá se va a listar el proyecto con idProject')
 })
 
