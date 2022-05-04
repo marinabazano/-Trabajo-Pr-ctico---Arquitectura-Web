@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 // Schema Project
 
 const projectSchema = mongoose.Schema({
+    _id: mongoose.Schema.Types.ObjectId,
     project_id: {
         type: Number,
         required: true
@@ -29,6 +30,7 @@ module.exports = Project;
 // Schema Task
 
 const taskSchema = mongoose.Schema({
+    _id: mongoose.Schema.Types.ObjectId,
     task_id: {
         type: Number,
         required: true
@@ -54,6 +56,7 @@ const Task = mongoose.model('Task', taskSchema);
 // Schema Employee
 
 const employeeSchema = mongoose.Schema({
+    _id: mongoose.Schema.Types.ObjectId,
     employee_id: {
         type: Number,
         required: true
