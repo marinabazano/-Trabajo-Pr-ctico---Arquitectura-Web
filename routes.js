@@ -32,6 +32,17 @@ app.get("/projects", async (request, response) => {
     }
 });
 
+app.get('/projects/:idProject', async (request, response) => {
+  console.log(request.params.idProject)
+  //res.send('Acá se va a listar el proyecto con idProject = ' + req.params.idProject)
+  const projects = await Project.find({project_id: request.params.idProject});
+    try {
+      response.send(projects);
+    } catch (error) {
+      response.status(500).send(error);
+    }
+})
+
 // POST Project
 
 app.post("/projects", async (request, response) => {
@@ -45,6 +56,13 @@ app.post("/projects", async (request, response) => {
     }
 });
 
+// DELETE Project
+
+app.delete('/projects/:idProject', async (req, res) => {
+  console.log(req.params.idProject)
+  res.send('Acá se va a borrar el proyecto con idProject = ' + req.params.idProject)
+})
+
 // GET Tasks
 
 app.get("/tasks", async (request, response) => {
@@ -56,6 +74,17 @@ app.get("/tasks", async (request, response) => {
       response.status(500).send(error);
     }
 });
+
+app.get('/tasks/:idTask', async (request, response) => {
+  console.log(request.params.idTask)
+  //res.send('Acá se va a listar la tarea con idTask = ' + req.params.idTask)
+  const tasks = await Task.find({task_id: request.params.idTask});
+    try {
+      response.send(tasks);
+    } catch (error) {
+      response.status(500).send(error);
+    }
+})
 
 // POST Project
 
@@ -81,6 +110,17 @@ app.get("/employees", async (request, response) => {
       response.status(500).send(error);
     }
 });
+
+app.get('/employees/:idEmployee', async (request, response) => {
+  console.log(request.params.idEmployee)
+  //response.send('Acá se va a listar el empleado con idEmployee = ' + request.params.idEmployee)
+  const employees = await Employee.find({employee_id: request.params.idEmployee});
+    try {
+      response.send(employees);
+    } catch (error) {
+      response.status(500).send(error);
+    }
+})
 
 // POST Project
 
