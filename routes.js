@@ -10,7 +10,12 @@ var requestTime = function (req, res, next) {
     req.requestTime = todaysDate;
     next();
 };
+
 app.use(requestTime);
+//app.use(bodyParser);
+app.use(express.json({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ extended: true }));
 
 // GET Home
 
@@ -47,9 +52,12 @@ app.get('/projects/:idProject', async (request, response) => {
 
 app.post("/projects", async (request, response) => {
     const project = new Project(request.body);
-  
+    console.log(request.body)
     try {
-      await project.save();
+      project.save(function(err, doc) {
+        if (err) return console.error(err);
+        console.log("Document inserted succussfully!");
+      });
       response.send(project);
     } catch (error) {
       response.status(500).send(error);
@@ -91,8 +99,12 @@ app.get('/tasks/:idTask', async (request, response) => {
 app.post("/tasks", async (request, response) => {
     const task = new Task(request.body);
   
+    console.log(request.body)
     try {
-      await task.save();
+      task.save(function(err, doc) {
+        if (err) return console.error(err);
+        console.log("Document inserted succussfully!");
+      });
       response.send(task);
     } catch (error) {
       response.status(500).send(error);
@@ -127,13 +139,20 @@ app.get('/employees/:idEmployee', async (request, response) => {
 app.post("/employees", async (request, response) => {
     const employee = new Employee(request.body);
   
+    console.log(request.body)
     try {
-      await employee.save();
+      employee.save(function(err, doc) {
+        if (err) return console.error(err);
+        console.log("Document inserted succussfully!");
+      });
       response.send(employee);
     } catch (error) {
       response.status(500).send(error);
     }
 });
+
+
+//-------------------GETs de cada pantalla (response archivos .HTML)---------------------
 
 
 module.exports = app;

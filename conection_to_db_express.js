@@ -8,7 +8,7 @@ const app = express();
 const port = 3000
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/arquitectura_web',
+mongoose.connect('mongodb://localhost:27017/arquitectura-web',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true
