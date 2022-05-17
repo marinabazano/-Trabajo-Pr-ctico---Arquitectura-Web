@@ -67,8 +67,12 @@ app.post("/projects", async (request, response) => {
 // DELETE Project
 
 app.delete('/projects/:idProject', async (req, res) => {
-  console.log(req.params.idProject)
-  res.send('Acá se va a borrar el proyecto con idProject = ' + req.params.idProject)
+  try {
+		await Project.deleteOne({ project_id: req.params.idProject })
+		res.status(204).send()
+	} catch {
+		res.status(404).send({ error })
+	}
 })
 
 // GET Tasks
@@ -94,7 +98,7 @@ app.get('/tasks/:idTask', async (request, response) => {
     }
 })
 
-// POST Project
+// POST Task
 
 app.post("/tasks", async (request, response) => {
     const task = new Task(request.body);
@@ -110,6 +114,18 @@ app.post("/tasks", async (request, response) => {
       response.status(500).send(error);
     }
 });
+
+// DELETE Task
+
+app.delete('/tasks/:idTask', async (req, res) => {
+  try {
+		await Task.deleteOne({ task_id: req.params.idTask })
+		res.status(204).send()
+	} catch {
+		res.status(404).send({ error })
+	}
+})
+
 
 // GET Employees
 
@@ -134,7 +150,7 @@ app.get('/employees/:idEmployee', async (request, response) => {
     }
 })
 
-// POST Project
+// POST Employee
 
 app.post("/employees", async (request, response) => {
     const employee = new Employee(request.body);
@@ -150,6 +166,17 @@ app.post("/employees", async (request, response) => {
       response.status(500).send(error);
     }
 });
+
+// DELETE Task
+
+app.delete('/employees/:idEmployee', async (req, res) => {
+  try {
+		await Employee.deleteOne({ employee_id: req.params.idEmployee })
+		res.status(204).send()
+	} catch {
+		res.status(404).send({ error })
+	}
+})
 
 
 //-------------------GETs de cada pantalla (response archivos .HTML)---------------------

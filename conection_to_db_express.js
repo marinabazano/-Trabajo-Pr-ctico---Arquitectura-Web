@@ -5,10 +5,10 @@ const bodyParser = require('body-parser')
 const { redirect } = require('express/lib/response')
 
 const app = express();
-const port = 3000
+const port = 3001
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/arquitectura-web',
+mongoose.connect('mongodb://localhost:27017/arquitectura_web',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true
