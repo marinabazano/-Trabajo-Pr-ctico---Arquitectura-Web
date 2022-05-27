@@ -33,6 +33,19 @@ Las entidades que se van a trabajar son:
 ## Tecnologias
 <a name="technologies"></a>
 
+* Data Warehouse:
+  * MongoDB Compass
+* IDE:
+  * Visual Studio Code
+* Conexión de DB a Backend:
+  * Biblioteca Mongoose
+* Backend:
+  * NodeJs
+* Server:
+  * Biblioteca Express
+* Frontend:
+  * HTML / Intento de React
+
 ## Documentación en Swagger de la API
 <a name="swagger"></a>
 https://app.swaggerhub.com/apis/Arquitectura-Web/Administrador-Proyectos/1.0
