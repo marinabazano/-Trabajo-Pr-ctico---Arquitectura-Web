@@ -18,6 +18,8 @@ Las entidades que se van a trabajar son:
 * Tareas: cada proyecto puede tener 0 o más tareas.
 * Usuario: cada usuario puede tener un proyecto asignado.
 
+![Esta es una imagen](Trabajo-Practico-Arquitectura-Web/DER.png)
+
 ## Índice
 
 1. [Info General del Proyecto](#general-info)
