@@ -18,7 +18,7 @@ Las entidades que se van a trabajar son:
 * Tareas: cada proyecto puede tener 0 o más tareas.
 * Usuario: cada usuario puede tener un proyecto asignado.
 
-![DER](https://github.com/marinabazano/Trabajo-Practico-Arquitectura-Web.git/DER.png)
+![DER](https://github.com/marinabazano/Trabajo-Practico-Arquitectura-Web/blob/main/DER.png?raw=true)
 
 ## Índice
 
