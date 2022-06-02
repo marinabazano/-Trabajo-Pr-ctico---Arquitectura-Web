@@ -65,6 +65,8 @@ Este CRUD puede ser visualizado y probado en sistemas como POSTMAN para testear 
 <a name="swagger"></a>
 https://app.swaggerhub.com/apis/Arquitectura-Web/Administrador-Proyectos/1.0
 
+![Endpoints](https://github.com/marinabazano/Trabajo-Practico-Arquitectura-Web/blob/main/paths.JPG?raw=true)
+
 ## Clonar Repositorio en Local
 <a name="installation"></a>
 
