@@ -71,20 +71,69 @@ app.get('/projects/:idProject', async (request, response) => {
     }
 })
 
-// POST Project
-
-app.post("/projects", async (request, response) => {
-    const project = new Project(request.body);
-    console.log(request.body)
+app.get('/projects/:idProject/tasks', async (request, response) => {
+  console.log(request.params.idProject)
+  const tasks = await Task.find({project_id: request.params.idProject});
     try {
-      project.save(function(err, doc) {
-        if (err) return console.error(err);
-        console.log("Document inserted succussfully!");
-      });
-      response.send(project);
+      response.status(200)
+      response.send(tasks);
     } catch (error) {
       response.status(500).send(error);
     }
+})
+
+app.get('/projects/:idProject/employees', async (request, response) => {
+  console.log(request.params.idProject)
+  const employees = await Employee.find({project_id: request.params.idProject});
+    try {
+      response.status(200)
+      response.send(employees);
+    } catch (error) {
+      response.status(500).send(error);
+    }
+})
+
+// POST Project
+
+app.post('/projects', async (request, response) => {
+  const project = new Project(request.body);
+  console.log(request.body)
+  try {
+    project.save(function(err, doc) {
+      if (err) return console.error(err);
+        console.log("Document inserted succussfully!");
+      });
+    response.send(project);
+  } catch (error) {
+    response.status(500).send(error);
+  }
+});
+
+// PATCH Project
+
+app.patch('/projects/:idProject', async (request, response) => {
+  try {
+    const project = await Project.findOne({project_id: request.params.idProject});
+    console.log(request.body.project_name)
+    if (request.body.project_name) {
+			project.project_name = request.body.project_name
+		}
+		if (request.body.description) {
+			project.description = request.body.description
+		}
+    if (request.body.estimated_hours) {
+			project.description = request.body.estimated_hours
+		}
+    await project.save()
+    project.save(function(err, doc) {
+      if (err) return console.error(err);
+        console.log("Document inserted succussfully!");
+      });
+    response.send(project);
+  } catch (error) {
+    response.status(404)
+		response.send({ error: "El proyecto indicado no existe!" })
+  }
 });
 
 // DELETE Project

@@ -1,0 +1,17 @@
+[
+  {
+    "employee_id": 1,
+    "employee_name": "Marina",
+    "area": "Sistemas"
+  },
+  {
+    "employee_id": 2,
+    "employee_name": "Marta",
+    "area": "Administracion"
+  },
+  {
+    "employee_id": 3,
+    "employee_name": "Leandro",
+    "area": "Legales"
+  }
+]

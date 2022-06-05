@@ -1,0 +1,32 @@
+[
+  {
+    "project_id": 1,
+    "project_name": "CoD",
+    "description": "Mejora de la ciudad mediante reclamos",
+    "estimated_hours": 150
+  },
+  {
+    "project_id": 2,
+    "project_name": "Boti",
+    "description": "Bot inteligente para servicios",
+    "estimated_hours": 200
+  },
+  {
+    "project_id": 3,
+    "project_name": "VirtualBaires",
+    "description": "Ciudad digital",
+    "estimated_hours": 120
+  },
+  {
+    "project_id": 4,
+    "project_name": "BA Data",
+    "description": "Transparecia de informacion",
+    "estimated_hours": 300
+  },
+  {
+    "project_id": 5,
+    "project_name": "BA Taxi",
+    "description": "App para taxis de la ciudad",
+    "estimated_hours": 80
+  }
+]
