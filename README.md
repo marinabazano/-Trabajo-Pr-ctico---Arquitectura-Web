@@ -18,6 +18,8 @@ Las entidades que se van a trabajar son:
 * Tareas: cada proyecto puede tener 0 o más tareas.
 * Usuario: cada usuario puede tener un proyecto asignado.
 
+![DER](https://github.com/marinabazano/Trabajo-Practico-Arquitectura-Web/blob/main/DER.png?raw=true)
+
 ## Índice
 
 1. [Info General del Proyecto](#general-info)
@@ -30,12 +32,40 @@ Las entidades que se van a trabajar son:
 ## Info General del Proyecto
 <a name="general-info"></a>
 
+Para cumplir con la existencia de un CRUD en el front se va a poder:
+* Crear un proyecto nuevo.
+* Listar información de proyectos existentes.
+* Actualizar el estado de un proyecto existente.
+* Eliminar un proyecto existente.
+
+Las entidades que se van a trabajar son:
+* Proyecto: entidad principal, son únicos.
+* Tareas: cada proyecto puede tener 0 o más tareas.
+* Usuario: cada usuario puede tener un proyecto asignado.
+
+Este CRUD puede ser visualizado y probado en sistemas como POSTMAN para testear cada endpoint de la API. Además de poder realizar los GETs desde el browser de preferencia.
+
 ## Tecnologias
 <a name="technologies"></a>
+
+* Data Warehouse:
+  * MongoDB Compass
+* IDE:
+  * Visual Studio Code
+* Conexión de DB a Backend:
+  * Biblioteca Mongoose
+* Backend:
+  * NodeJs
+* Server:
+  * Biblioteca Express
+* Frontend:
+  * HTML / Intento de React
 
 ## Documentación en Swagger de la API
 <a name="swagger"></a>
 https://app.swaggerhub.com/apis/Arquitectura-Web/Administrador-Proyectos/1.0
+
+![Endpoints](https://github.com/marinabazano/Trabajo-Practico-Arquitectura-Web/blob/main/paths.JPG?raw=true)
 
 ## Clonar Repositorio en Local
 <a name="installation"></a>
